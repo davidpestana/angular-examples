@@ -1,3 +1,4 @@
+import { CharacterModule as CharacterFeature} from '../../features';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterComponent } from './character.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    CharacterFeature
   ]
 })
 export class CharacterModule { }
