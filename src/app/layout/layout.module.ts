@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { LayoutComponent } from './layout.component';
 import { RouterModule } from '@angular/router';
+import { RoutesFilterPipe } from './pipes/routes-filter.pipe';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     MenuComponent,
     HeaderComponent,
     BodyComponent,
-    LayoutComponent
+    LayoutComponent,
+    RoutesFilterPipe
   ],
   imports: [
     CommonModule,

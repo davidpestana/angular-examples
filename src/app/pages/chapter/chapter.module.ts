@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChapterComponent } from './chapter.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes: Routes = [
+  {path:":chapterId", component: ChapterComponent},
+  {path:"", redirectTo: '/', pathMatch: 'full'}
+]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ChapterComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class ChapterModule { }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
+import { Routes } from '../types';
 
 @Component({
   selector: 'app-menu',
@@ -11,6 +12,9 @@ export class MenuComponent {
   routes: Routes;
 
   constructor(private rs: Router) {
+
+    console.log(this.rs.config);
+
     this.routes = this.rs.config[0].children || [];
   }
 }
