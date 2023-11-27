@@ -1,6 +1,7 @@
+import { LayoutService } from './../layout.service';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Routes } from '../types';
+
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +12,7 @@ export class MenuComponent {
 
   routes: Routes;
 
-  constructor(private rs: Router) {
-    this.routes = this.rs.config[0].children || [];
+  constructor(private layoutService: LayoutService) {
+    this.routes = this.layoutService.routes;
   }
 }

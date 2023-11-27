@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
+import { pages } from './pages/pages';
+import { RouterModule } from '@angular/router';
+import { Routes } from './layout/types';
+import { LayoutComponent } from './layout/layout.component';
+
+const routes: Routes = [
+  {path: "", component: LayoutComponent, children: pages},
+]
 
 @NgModule({
   declarations: [
@@ -12,10 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     HttpClientModule,
-    LayoutModule,
+    LayoutModule.forRoot(pages),
   ],
   providers: [],
   bootstrap: [AppComponent]
