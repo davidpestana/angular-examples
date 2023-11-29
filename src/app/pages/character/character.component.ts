@@ -16,4 +16,8 @@ export class CharacterComponent {
       this.characters$ = this.characterService.characters;
     }
 
+    next() {
+      this.characterService.page++;
+    }
+
 }

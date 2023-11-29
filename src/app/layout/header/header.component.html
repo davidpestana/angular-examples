@@ -2,6 +2,9 @@
   <div class="nav-wrapper">
     <ul>
       <li><i class="material-icons" menu>menu</i></li>
+       <li>personajes<span class="badge">{{ charactersL$ | async }}</span></li>
+       <li><button (click)="change()">{{value$ | async }}</button></li>
+
     </ul>
   </div>
 </nav>

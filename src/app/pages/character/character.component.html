@@ -1,1 +1,4 @@
-{{ characters$ | async | json }}
+<button (click)="next()">siguiente</button>
+<div *ngFor="let character of characters$ | async">
+  {{ character | json }}
+</div>
