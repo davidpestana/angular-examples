@@ -1,1 +1,5 @@
-<div><a [routerLink]="route.path" *ngFor="let route of routes | routesFilter">{{route.title}}</a></div>
+<ul>
+  <li *ngFor="let route of routes | routesFilter">
+    <a [routerLink]="route.path">{{route.title}}</a>
+  </li>
+</ul>

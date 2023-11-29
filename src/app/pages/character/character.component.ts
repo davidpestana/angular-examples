@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CharacterService } from 'src/app/features/character/character.service';
 import { Characters } from 'src/app/features/character/types/character';
+import { MaterializeService } from 'src/app/layout/materialize.service';
 
 @Component({
   selector: 'app-character',
@@ -14,4 +15,5 @@ export class CharacterComponent {
     constructor(private characterService: CharacterService){
       this.characters$ = this.characterService.characters;
     }
+
 }

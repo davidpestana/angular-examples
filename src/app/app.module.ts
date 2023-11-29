@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { Routes } from './layout/types';
 import { LayoutComponent } from './layout/layout.component';
 
+
 const routes: Routes = [
   {path: "", component: LayoutComponent, children: pages},
 ]

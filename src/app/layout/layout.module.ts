@@ -8,8 +8,8 @@ import { RouterModule } from '@angular/router';
 import { RoutesFilterPipe } from './pipes/routes-filter.pipe';
 import { Routes } from './types';
 import { LayoutService } from './layout.service';
-
-
+import { MenuDirective } from './directives/menu.directive';
+import { SidenavDirective } from './directives/sidenav.directive';
 
 @NgModule({
   declarations: [
@@ -17,19 +17,21 @@ import { LayoutService } from './layout.service';
     HeaderComponent,
     BodyComponent,
     LayoutComponent,
-    RoutesFilterPipe
+    RoutesFilterPipe,
+    MenuDirective,
+    SidenavDirective
   ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    LayoutComponent
-  ]
+    LayoutComponent,
+    MenuDirective
+  ],
 })
-export class LayoutModule  {
+export class LayoutModule {
   static forRoot(routes: Routes): ModuleWithProviders<LayoutModule> {
-    /* LOGICA */
     return {
       ngModule: LayoutModule,
       providers: [
