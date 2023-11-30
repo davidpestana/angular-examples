@@ -13,4 +13,8 @@ export class MaterializeService {
   public set sidenav(sidenav: ElementRef<HTMLUListElement>) {
     this.materializeSidenav = M.Sidenav.init(sidenav.nativeElement,{});
   }
+
+  public createCollapsible(collapsible: ElementRef<any>) {
+    return M.Collapsible.init(collapsible.nativeElement,{});
+  }
 }

@@ -1,4 +1,8 @@
 <button (click)="next()">siguiente</button>
-<div *ngFor="let character of characters$ | async">
-  {{ character | json }}
+<button (click)="create()">añadir</button>
+<app-paginator (pageChange)="pageChange($event)"></app-paginator>
+<div class="row">
+  <div class="col s3" *ngFor="let character of characters$ | async">
+    <app-character-card [character]="character"></app-character-card>
+  </div>
 </div>

@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 export interface Config {
   showLocations: boolean;
+  showTen: boolean;
 }
 
 @Injectable({
@@ -11,7 +12,8 @@ export interface Config {
 export class ConfigService {
 
   _config: BehaviorSubject<Config> = new BehaviorSubject<Config>({
-    showLocations: true
+    showLocations: true,
+    showTen: true,
   })
 
   constructor() { }
@@ -23,6 +25,11 @@ export class ConfigService {
   changeLocationsValue() {
     let value = this._config.getValue();
     this._config.next({...value, showLocations: !value.showLocations});
+  }
+
+  changeShowTen() {
+    let value = this._config.getValue();
+    this._config.next({...value, showTen: !value.showTen});
   }
 
 }

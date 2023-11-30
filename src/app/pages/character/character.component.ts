@@ -17,7 +17,19 @@ export class CharacterComponent {
     }
 
     next() {
-      this.characterService.page++;
+      this.characterService.next();
+    }
+
+    pageChange(page: string) {
+      this.characterService.virtualPage = page;
+    }
+
+    create() {
+      this.characterService.create({
+        id: '111111',
+        name: 'david',
+        image: 'canarias',
+      })
     }
 
 }

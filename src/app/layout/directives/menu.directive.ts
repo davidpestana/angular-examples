@@ -15,7 +15,6 @@ export class MenuDirective {
   }
 
   @HostListener('click') click() {
-    console.log('click');
     this.ms.materializeSidenav?.open();
   }
 

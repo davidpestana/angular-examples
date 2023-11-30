@@ -10,6 +10,7 @@ import { Routes } from './types';
 import { LayoutService } from './layout.service';
 import { MenuDirective } from './directives/menu.directive';
 import { SidenavDirective } from './directives/sidenav.directive';
+import { CollapsibleDirective } from './directives/collapsible.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidenavDirective } from './directives/sidenav.directive';
     LayoutComponent,
     RoutesFilterPipe,
     MenuDirective,
-    SidenavDirective
+    SidenavDirective,
+    CollapsibleDirective
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { SidenavDirective } from './directives/sidenav.directive';
   ],
   exports: [
     LayoutComponent,
-    MenuDirective
+    MenuDirective,
+    CollapsibleDirective,
   ],
 })
 export class LayoutModule {

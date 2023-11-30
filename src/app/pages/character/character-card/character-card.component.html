@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-image waves-effect waves-block waves-light">
+     <img class="activator" [src]="character?.image">
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">{{character?.name}}<i class="material-icons right" #r>more_vert</i></span>
+    <ul collapsible [controller]="r">
+      <li>
+        <!-- <div class="collapsible-header"><i class="material-icons">filter_drama</i>abrir</div> -->
+        <div class="collapsible-body">
+          <p *ngFor="let episode of character?.episode | episodeNumber"><a [routerLink]="['/','chapters', episode]">{{ episode }}</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

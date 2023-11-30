@@ -4,6 +4,7 @@ export interface Character {
   name: string;
   image: string;
   location?: Location;
+  episode?: [];
 }
 export type Characters = Character[];
 
