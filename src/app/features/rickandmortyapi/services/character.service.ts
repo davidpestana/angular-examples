@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, combineLatest, map, switchMap } from 'rxjs';
-import { Character, Characters } from './types/character';
+import { Character, Characters } from '../types/character';
 import { Config, ConfigService } from 'src/app/config.service';
 
 @Injectable({

@@ -1,8 +1,7 @@
-import { Character } from './../../features/character/types/character';
 import { Component, ElementRef, Input } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { ConfigService } from 'src/app/config.service';
-import { CharacterService } from 'src/app/features/character/character.service';
+import { CharacterService } from 'src/app/features/rickandmortyapi';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +21,7 @@ export class HeaderComponent {
   ){
     this.charactersL$ = this.cs.length;
     this.total$ = this.cs.total;
-    
+
     this.value1$ = this.configService.config.pipe(map(({showLocations}) => showLocations ? 'mostrar location': 'no mostrar location'));
     this.value2$ = this.configService.config.pipe(map(({showTen}) => showTen ? 'mostrar 10': 'mostrar todos'));
   }

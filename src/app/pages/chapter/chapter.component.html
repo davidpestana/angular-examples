@@ -1,2 +1,5 @@
-<p>chapter works!</p>
-{{ chapterId$ | async }}
+
+{{ episode$ | async | json }}
+
+
+{{ (episodeService.episodes | async)?.length }}

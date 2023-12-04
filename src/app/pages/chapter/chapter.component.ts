@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, map } from 'rxjs';
+import { Observable, map, switchMap } from 'rxjs';
+import { Episode, EpisodeService } from 'src/app/features/rickandmortyapi';
 
 @Component({
   selector: 'app-chapter',
@@ -9,9 +10,15 @@ import { Observable, map } from 'rxjs';
 })
 export class ChapterComponent {
 
-    chapterId$: Observable<string>;
+    episode$:Observable<Episode>;
 
-    constructor(private router: ActivatedRoute) {
-       this.chapterId$ = this.router.params.pipe(map(({chapterId}) => chapterId));
+    constructor(
+      private router: ActivatedRoute,
+      public episodeService: EpisodeService
+    ) {
+      this.episode$ = this.router.params.pipe(
+          map(({episodeId}) => episodeId),
+          switchMap(episodeId => this.episodeService.find(episodeId))
+      );
     }
 }

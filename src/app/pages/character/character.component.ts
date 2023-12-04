@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CharacterService } from 'src/app/features/character/character.service';
-import { Characters } from 'src/app/features/character/types/character';
-import { MaterializeService } from 'src/app/layout/materialize.service';
+import { CharacterService, Characters } from 'src/app/features/rickandmortyapi';
 
 @Component({
   selector: 'app-character',

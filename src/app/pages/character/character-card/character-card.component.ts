@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Character } from 'src/app/features/character/types/character';
+import { Character } from 'src/app/features/rickandmortyapi';
 
 @Component({
   selector: 'app-character-card',

@@ -4,7 +4,7 @@ import { ChapterComponent } from './chapter.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:":chapterId", component: ChapterComponent},
+  {path:":episodeId", component: ChapterComponent},
   {path:"", redirectTo: '/', pathMatch: 'full'}
 ]
 
