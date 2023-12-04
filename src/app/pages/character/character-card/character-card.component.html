@@ -7,7 +7,7 @@
     <ul collapsible [controller]="r">
       <li>
         <!-- <div class="collapsible-header"><i class="material-icons">filter_drama</i>abrir</div> -->
-        <div class="collapsible-body">
+        <div class="collapsible-body"> <!-- 0 -->
           <p *ngFor="let episode of character?.episode | episodeNumber"><a [routerLink]="['/','chapters', episode]">{{ episode }}</a></p>
         </div>
       </li>
